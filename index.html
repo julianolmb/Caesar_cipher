@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Learn to Read Caesar</title>
+</head>
+<body>
+    <div class="container-fluid containernomargin">
+        <div class="header">
+            <div class="col-12 headertittle">
+                <h4>
+                    Discover the Caesar Cipher
+                </h4>
+            </div>
+            <div class="col-12 headerexplanation">
+                <h6>
+                    The Caesar cipher is perhaps one of the simplest and most known forms of encryption. The technique was named
+                    after the also famous Julius Caesar, emperor of Rome, who used on his private correspondences. The method uses a
+                    substitution cipher in which each letter is replaced by another letter with it's position in the alphabet changed by a fixed number.
+                </h6>
+            </div>
+        </div>
+
+        <form name="caeserForm" id="ceaserForm">
+            <label for="userMessage">Initial Message:</label><br />
+            <textarea id="userMessage" rows="4" cols="50" >
+            </textarea>
+            <br/> <br/>
+            <label for="userKeys">Keys:</label>
+            <input type="number" min="0" max="26" id="userKeys" value="1" onchange="updateKeys(this)"/>
+            <br/> <br/>
+            <label for="encode"><input type="button" value="Encode" id="encode" onclick="encodeMessage()"/></label>
+            <label for="decode"></label><input type="button" value="Decode" id="decode" onclick="decodeMessage()" /></label>
+            <br/> <br/>
+            <label for="finalmessage">Final Message:</label><br />
+            <textarea id="finalmessage" rows="4" cols="50">
+            </textarea>
+          </form>
+        
+    </div>
+
+
+
+    <script src="cesar.js"></script>
+</body>
+</html>
